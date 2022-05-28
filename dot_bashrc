@@ -198,3 +198,6 @@ export PATH="/home/jay/.poetry/bin:$PATH"
 if [ -d "$HOME/Apps/adb-fastboot/platform-tools" ] ; then
  export PATH="$HOME/Apps/adb-fastboot/platform-tools:$PATH"
 fi
+
+# Add chezmoi to path
+export PATH="/home/jay/.chezmoi/bin:$PATH"
