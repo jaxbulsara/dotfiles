@@ -1,3 +1,4 @@
 .vim/pack/**/*
 !.vim/pack/*.*
 instructions.md
+files/
