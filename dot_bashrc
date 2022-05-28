@@ -192,7 +192,7 @@ eval "$(pyenv init -)"
 alias python=python3
 
 # Poetry path
-export PATH="/home/jay/.local/bin:$PATH"
+export PATH="/home/jay/.poetry/bin:$PATH"
 
 # add ADB to path
 if [ -d "$HOME/Apps/adb-fastboot/platform-tools" ] ; then
