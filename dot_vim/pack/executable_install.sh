@@ -23,6 +23,7 @@ source ~/.vim/pack/functions.sh
     group editing
     package https://github.com/ervandew/supertab.git &
     package https://github.com/tpope/vim-surround.git &
+    package https://github.com/kana/vim-textobj-user.git &
     wait
 ) &
 
