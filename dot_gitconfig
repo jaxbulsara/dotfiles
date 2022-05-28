@@ -1,0 +1,9 @@
+[user]
+	email = jaybulsara@proton.me
+	name = Jay Bulsara
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
