@@ -52,5 +52,11 @@ source ~/.vim/pack/functions.sh
     package https://github.com/coachshea/vim-textobj-markdown.git &
 )
 
+# Cypher
+(
+    group cypher
+    package https://github.com/neo4j-contrib/cypher-vim-syntax.git &
+)
+
 wait
 
