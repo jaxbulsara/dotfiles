@@ -196,3 +196,12 @@ export PATH="/home/jay/.poetry/bin:$PATH"
 
 # Add chezmoi to path
 export PATH="/home/jay/.chezmoi/bin:$PATH"
+
+# Stingray Development
+export STINGRAY_DIR=/mnt/storage/Mitsubishi/Stingray
+export STINGRAY_DATA=${STINGRAY_DIR}/Data
+export STINGRAY_LOGS=${STINGRAY_DIR}/Logs
+export STINGRAY_SHARE=${STINGRAY_DIR}/Share
+export STINGRAY_NEO4J=${STINGRAY_DIR}/Neo4j
+export STINGRAY_SQL=${STINGRAY_DIR}/MSSQL
+
