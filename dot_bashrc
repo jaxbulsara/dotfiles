@@ -137,7 +137,7 @@ function create_prompt {
     local __colon="$DEFAULT: "
 
     # Working directory
-    local __directory="$BLUE\w"
+    local __directory="$BLUE\W"
 
     # Git branch info
     local __git_branch_color="$GREEN"
