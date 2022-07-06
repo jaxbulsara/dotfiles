@@ -22,7 +22,7 @@ May have to unset and reset autoconnect on reboot.
 
 
 ## Mounting partitions
- 
+
 blkid - gives UUIDs for each partition
 Make entries in /etc/fstab
 - `ext4`: `UID=[UUID] [/mount/point] ext4 nosuid,nodev,nofail,x-gvfs-show 0 0`
@@ -34,7 +34,7 @@ sudo groupadd mounts
 sudo usermod -aG mounts $USER
 sudo chown -R :mounts /mnt/data
 ... to all of the mounts
-    
+
 
 ## Partition copying
 
@@ -102,3 +102,7 @@ sudo usermod -aG docker $USER
 reboot
 
 
+## Javascript
+
+npm install -g --save-dev eslint prettier \
+    @typescript-eslint/eslint-plugin @typescript-eslint/parser
