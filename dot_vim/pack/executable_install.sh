@@ -24,6 +24,8 @@ source ~/.vim/pack/functions.sh
     package https://github.com/ervandew/supertab.git &
     package https://github.com/tpope/vim-surround.git &
     package https://github.com/kana/vim-textobj-user.git &
+    package https://github.com/tpope/vim-commentary.git &
+    package https://github.com/jiangmiao/auto-pairs.git &
     wait
 ) &
 
@@ -56,6 +58,19 @@ source ~/.vim/pack/functions.sh
 (
     group cypher
     package https://github.com/neo4j-contrib/cypher-vim-syntax.git &
+)
+
+# Javascript
+(
+    group javascript
+    package https://github.com/pangloss/vim-javascript.git &
+    package https://github.com/mxw/vim-jsx.git &
+)
+
+# Files
+(
+    group files
+    package https://github.com/leshill/vim-json.git &
 )
 
 wait
