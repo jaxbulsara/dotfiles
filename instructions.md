@@ -104,5 +104,7 @@ reboot
 
 ## Javascript
 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+nvm install node
 npm install -g --save-dev eslint prettier \
     @typescript-eslint/eslint-plugin @typescript-eslint/parser
