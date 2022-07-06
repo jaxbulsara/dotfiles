@@ -17,19 +17,19 @@ set expandtab
 set softtabstop=4
 
 " Autoclose boundaries
-inoremap " ""<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap (<CR> (<CR><TAB><CR><BACKSPACE>)<Up><ESC>A
-inoremap {<CR> {<CR><TAB><CR><BACKSPACE>}<Up><ESC>A
-inoremap [<CR> [<CR><TAB><CR><BACKSPACE>]<Up><ESC>A
-inoremap {;<CR> {<CR>};<ESC>O
+" inoremap " ""<left>
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
+" inoremap (<CR> (<CR><TAB><CR><BACKSPACE>)<Up><ESC>A
+" inoremap {<CR> {<CR><TAB><CR><BACKSPACE>}<Up><ESC>A
+" inoremap [<CR> [<CR><TAB><CR><BACKSPACE>]<Up><ESC>A
+" inoremap {;<CR> {<CR>};<ESC>O
 
 " Type over closing boundaries
-inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
-inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
-inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
+" inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+" inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
+" inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
 
 " Make background transparent by removing theme background
 hi Normal guibg=NONE ctermbg=NONE
@@ -52,8 +52,8 @@ let g:vim_markdown_folding_disabled = 1
 " Fixers
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint'],
+\   'javascript': ['prettier', 'eslint'],
+\   'typescript': ['prettier', 'eslint'],
 \   'python': ['isort', 'black'],
 \}
-let g:ale_fix_on_save = 1   
-
+let g:ale_fix_on_save = 1
