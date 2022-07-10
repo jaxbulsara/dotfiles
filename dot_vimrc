@@ -21,6 +21,7 @@ inoremap " ""<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
+inoremap < <><left>
 inoremap (<CR> (<CR><TAB><CR><BACKSPACE>)<Up><ESC>A
 inoremap {<CR> {<CR><TAB><CR><BACKSPACE>}<Up><ESC>A
 inoremap [<CR> [<CR><TAB><CR><BACKSPACE>]<Up><ESC>A
@@ -30,6 +31,7 @@ inoremap {;<CR> {<CR>};<ESC>O
 inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
 inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
+inoremap <expr> > strpart(getline('.'), col('.')-1, 1) == ">" ? "\<Right>" : ">"
 
 " Make background transparent by removing theme background
 hi Normal guibg=NONE ctermbg=NONE
