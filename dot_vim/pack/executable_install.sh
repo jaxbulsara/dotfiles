@@ -64,7 +64,7 @@ source ~/.vim/pack/functions.sh
 (
     group javascript
     package https://github.com/pangloss/vim-javascript.git &
-    package https://github.com/mxw/vim-jsx.git &
+    package https://github.com/MaxMEllon/vim-jsx-pretty.git &
 )
 
 # Files
