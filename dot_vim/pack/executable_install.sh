@@ -25,6 +25,7 @@ source ~/.vim/pack/functions.sh
     package https://github.com/tpope/vim-surround.git &
     package https://github.com/kana/vim-textobj-user.git &
     package https://github.com/tpope/vim-commentary.git &
+    package https://github.com/jaxbulsara/auto-pairs.git &
     wait
 ) &
 
@@ -73,4 +74,3 @@ source ~/.vim/pack/functions.sh
 )
 
 wait
-
