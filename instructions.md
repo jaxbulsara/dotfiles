@@ -108,3 +108,12 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install node
 npm install -g --save-dev eslint prettier \
     @typescript-eslint/eslint-plugin @typescript-eslint/parser
+
+
+## Building Vim
+
+wget <.tar.gz>
+tar xzf <.tar.gz>
+cd vim*
+./configure --with-features=huge --enable-balloon_eval=yes --enable-pythoninterp=yes --enable-python3interp=yes
+sudo make install
