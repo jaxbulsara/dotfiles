@@ -4,6 +4,7 @@ let g:python_highlight_all = 1
 let g:rehash256=1
 colorscheme monokai-midnight
 set cursorline
+set backspace=indent,eol,start
 
 " General
 set number
