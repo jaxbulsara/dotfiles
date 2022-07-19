@@ -189,7 +189,7 @@ if ! shopt -oq posix; then
   fi
 fi
 eval "$(pyenv init -)"
-# alias python=python3
+alias python=python3
 
 # Poetry path
 export PATH="/home/jay/.poetry/bin:$PATH"
