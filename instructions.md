@@ -115,7 +115,7 @@ npm install -g --save-dev eslint prettier \
 wget <.tar.gz>
 tar xzf <.tar.gz>
 cd vim*
-./configure --with-features=huge --enable-balloon_eval=yes --enable-pythoninterp=yes --enable-python3interp=yes
+./configure --with-features=huge --enable-pythoninterp=yes --enable-python3interp=yes
 sudo make install
 
 sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/vim 1
