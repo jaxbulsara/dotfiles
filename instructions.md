@@ -108,3 +108,45 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install node
 npm install -g --save-dev eslint prettier \
     @typescript-eslint/eslint-plugin @typescript-eslint/parser
+
+## Synology SSH and Keys
+
+### Enable home directories
+
+In the NAS, go to Control Panel > Users and Groups > Advanced
+
+Enable home directories
+
+### Enable a user to use ssh
+
+local$ ssh -p [port] admin@[synology]
+admin@remote$ sudo -i
+root@remote$ vim /etc/crontab
+
+Add the following to permanently enable a login shell for a user:
+
+@reboot root sed -ie "/[username]/s;/sbin/nologin;/bin/sh;" /etc/passwd
+
+Replace '[username]' with actual username.
+
+### Enable SSH public keys
+
+root@remote$ vim /etc/ssh/sshd_config
+
+Uncomment the following lines:
+PubkeyAuthentication yes
+AuthorizedKeysFile	.ssh/authorized_keys
+
+Reboot the NAS
+
+### Create SSH key
+
+local$ ssh-keygen -t rsa -C "[user]@[localhost]"
+local$ ssh-copy-id -p [port] [user]@[synology]
+
+Alternatively, copy the public key (e.g. ~/.ssh/id_rsa.pub) to the user's home
+directory in the NAS and run:
+
+user@remote$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authentication_keys
+
+SSH should now work without password

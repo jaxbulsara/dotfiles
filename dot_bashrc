@@ -198,7 +198,7 @@ export PATH="/home/jay/.poetry/bin:$PATH"
 export PATH="/home/jay/.chezmoi/bin:$PATH"
 
 # Stingray Development
-export STINGRAY_DIR=/home/jay/code/work/data-stingray
+export STINGRAY_DIR=/home/dev/stingray
 export STINGRAY_DATA=${STINGRAY_DIR}/Data
 export STINGRAY_LOGS=${STINGRAY_DIR}/Logs
 export STINGRAY_SHARE=${STINGRAY_DIR}/Share
