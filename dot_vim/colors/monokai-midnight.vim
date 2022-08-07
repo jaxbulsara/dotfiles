@@ -208,7 +208,7 @@ if &t_Co > 255
    hi Statement       ctermfg=161               cterm=bold
    hi StatusLine      ctermfg=238 ctermbg=253
    hi StatusLineNC    ctermfg=244 ctermbg=232
-   hi StorageClass    ctermfg=172
+   hi StorageClass    ctermfg=208
    hi Structure       ctermfg=81
    hi Tag             ctermfg=161
    hi Title           ctermfg=166
@@ -268,7 +268,7 @@ if &t_Co > 255
        hi LineNr          ctermfg=239 ctermbg=16
        hi NonText         ctermfg=239
        hi SpecialKey      ctermfg=239
-       
+
        hi PythonStrFormat ctermfg=81
        hi PythonStrFormatting ctermfg=81
    endif
