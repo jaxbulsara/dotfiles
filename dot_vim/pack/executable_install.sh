@@ -67,6 +67,12 @@ source ~/.vim/pack/functions.sh
     package https://github.com/MaxMEllon/vim-jsx-pretty.git &
 )
 
+# HTML
+(
+    group html
+    package https://github.com/mattn/emmet-vim.git &
+)
+
 # Files
 (
     group files
