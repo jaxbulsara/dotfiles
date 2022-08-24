@@ -18,9 +18,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" AutoPairs
-let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''", "<":">"}
-
 " Make background transparent by removing theme background
 hi Normal guibg=NONE ctermbg=NONE
 
