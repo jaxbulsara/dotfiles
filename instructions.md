@@ -150,3 +150,9 @@ directory in the NAS and run:
 user@remote$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authentication_keys
 
 SSH should now work without password
+
+## Vim syntax highlighting
+
+See all highlight groups:
+
+:so $VIMRUNTIME/syntax/hitest.vim 
