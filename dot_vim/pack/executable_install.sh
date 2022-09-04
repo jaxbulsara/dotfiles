@@ -14,6 +14,8 @@ source ~/.vim/pack/functions.sh
     package https://github.com/preservim/nerdtree.git &
     package https://github.com/vim-airline/vim-airline.git &
     package https://github.com/vim-airline/vim-airline-themes.git &
+    package https://github.com/christoomey/vim-tmux-navigator.git &
+    package https://github.com/preservim/vimux.git &
     wait
 ) &
 
