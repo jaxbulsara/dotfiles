@@ -151,8 +151,31 @@ user@remote$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authentication_keys
 
 SSH should now work without password
 
+
 ## Vim syntax highlighting
 
 See all highlight groups:
 
-:so $VIMRUNTIME/syntax/hitest.vim 
+:so $VIMRUNTIME/syntax/hitest.vim
+
+
+## Show and hide a cinnamon window toolbar
+
+Add keyboard shortcuts for the following commands. When pressed, click on the
+window you want to toggle the toolbar for.
+
+### Hide toolbar
+
+Ctrl+Alt+H
+
+```
+xprop -f _MOTIF_WM_HINTS 32c -set _MOTIF_WM_HINTS "0x2, 0x0, 0x2, 0x0, 0x0"
+```
+
+### Show toolbar
+
+Ctrl+Alt+S
+
+```
+xprop -f _MOTIF_WM_HINTS 32c -set _MOTIF_WM_HINTS "0x2, 0x0, 0x1, 0x0, 0x0"
+```
