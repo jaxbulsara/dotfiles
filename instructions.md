@@ -185,3 +185,10 @@ xprop -f _MOTIF_WM_HINTS 32c -set _MOTIF_WM_HINTS "0x2, 0x0, 0x1, 0x0, 0x0"
 sudo chown root:root battery
 sudo chmod 755 battery
 mv battery /usr/bin
+
+## Elixir and Erlang
+
+Download erlang precompiled from: https://www.erlang-solutions.com/downloads
+Download elixir source from: https://github.com/elixir-lang/elixir/releases
+
+Extract elixir source and build with `make` and install with `make install`
