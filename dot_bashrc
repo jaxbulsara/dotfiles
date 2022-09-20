@@ -215,3 +215,4 @@ alias tmux="TERM=screen-256color-bce tmux"
 
 # Set vi as default visual editor
 export VISUAL=vi
+. "$HOME/.cargo/env"

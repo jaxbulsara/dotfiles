@@ -75,6 +75,12 @@ source ~/.vim/pack/functions.sh
     package https://github.com/mattn/emmet-vim.git &
 )
 
+# Rust
+(
+    group rust
+    package https://github.com/rust-lang/rust.vim.git &
+)
+
 # Files
 (
     group files
