@@ -81,6 +81,12 @@ source ~/.vim/pack/functions.sh
     package https://github.com/rust-lang/rust.vim.git &
 )
 
+# Elixir
+(
+    group elixir
+    package https://github.com/elixir-editors/vim-elixir.git &
+)
+
 # Files
 (
     group files
