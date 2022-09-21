@@ -64,3 +64,6 @@ map <Leader>rp :VimuxPromptCommand<CR>
 map <Leader>rl :VimuxRunLastCommand<CR>
 map <Leader>ri :VimuxInspectRunner<CR>
 map <Leader>rz :VimuxZoomRunner<CR>
+
+" jedi-vim
+let g:jedi#popup_on_dot = 0
