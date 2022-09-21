@@ -87,6 +87,12 @@ source ~/.vim/pack/functions.sh
     package https://github.com/elixir-editors/vim-elixir.git &
 )
 
+# Erlang
+(
+    group erlang
+    package https://github.com/vim-erlang/vim-erlang-runtime.git &
+)
+
 # Files
 (
     group files
