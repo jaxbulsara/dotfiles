@@ -152,6 +152,11 @@ user@remote$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authentication_keys
 SSH should now work without password
 
 
+## Building Vim
+
+Make sure that python3 version matches that of libpython3-dev.
+
+
 ## Vim syntax highlighting
 
 See all highlight groups:
