@@ -1,5 +1,6 @@
 " Color scheme
 syntax on
+filetype plugin indent on
 let g:python_highlight_all = 1
 let g:rehash256=1
 colorscheme monokai-midnight
