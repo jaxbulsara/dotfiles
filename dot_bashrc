@@ -213,6 +213,8 @@ export NVM_DIR="$HOME/.nvm"
 # Run tmux with desired TERM variable
 alias tmux="TERM=screen-256color-bce tmux"
 
-# Set vi as default visual editor
-export VISUAL=vi
+# Set vim as default visual editor
+export VISUAL=vim
+
+# Rust
 . "$HOME/.cargo/env"
