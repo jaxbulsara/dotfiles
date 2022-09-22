@@ -197,6 +197,9 @@ export PATH="/home/jay/.poetry/bin:$PATH"
 # Add chezmoi to path
 export PATH="/home/jay/.chezmoi/bin:$PATH"
 
+# Add JDK to path
+export PATH="/home/jay/.local/bin/jdk:$PATH"
+
 # Stingray Development
 export STINGRAY_DIR=/home/jay/code/work/stingray_data
 export STINGRAY_DATA=${STINGRAY_DIR}/Data
