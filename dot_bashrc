@@ -200,6 +200,9 @@ export PATH="/home/jay/.chezmoi/bin:$PATH"
 # Add JDK to path
 export PATH="/home/jay/.local/bin/jdk/bin:$PATH"
 
+# Add fop to path
+export PATH="/home/jay/.local/bin/fop-2.7/fop:$PATH"
+
 # Stingray Development
 export STINGRAY_DIR=/home/jay/code/work/stingray_data
 export STINGRAY_DATA=${STINGRAY_DIR}/Data
