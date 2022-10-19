@@ -50,6 +50,7 @@ let g:ale_fixers = {
 \   'css': ['prettier', 'eslint'],
 \   'python': ['isort', 'black'],
 \   'rust': ['rustfmt'],
+\   'elixir': ['mix_format'],
 \}
 let g:ale_fix_on_save = 1
 
