@@ -1,4 +1,3 @@
 " Python specific vim configuration
 
-inoremap :<CR> :<CR><TAB>
-
+" inoremap :<CR> :<CR><TAB>
