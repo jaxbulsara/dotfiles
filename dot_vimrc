@@ -51,6 +51,7 @@ let g:ale_fixers = {
 \   'python': ['isort', 'black'],
 \   'rust': ['rustfmt'],
 \   'elixir': ['mix_format'],
+\   'perl': ['perltidy'],
 \}
 let g:ale_fix_on_save = 1
 
