@@ -93,6 +93,12 @@ source ~/.vim/pack/functions.sh
     package https://github.com/vim-erlang/vim-erlang-runtime.git &
 )
 
+# Perl
+(
+    group perl
+    package https://github.com/vim-perl/vim-perl.git &
+)
+
 # Files
 (
     group files
