@@ -54,55 +54,64 @@ source ~/.vim/pack/functions.sh
     group markdown
     package https://github.com/preservim/vim-markdown.git &
     package https://github.com/coachshea/vim-textobj-markdown.git &
-)
+    wait
+) &
 
 # Cypher
 (
     group cypher
     package https://github.com/neo4j-contrib/cypher-vim-syntax.git &
-)
+    wait
+) &
 
 # Javascript
 (
     group javascript
     package https://github.com/pangloss/vim-javascript.git &
     package https://github.com/MaxMEllon/vim-jsx-pretty.git &
-)
+    wait
+) &
 
 # HTML
 (
     group html
     package https://github.com/mattn/emmet-vim.git &
-)
+    wait
+) &
 
 # Rust
 (
     group rust
     package https://github.com/rust-lang/rust.vim.git &
-)
+    wait
+) &
 
 # Elixir
 (
     group elixir
     package https://github.com/elixir-editors/vim-elixir.git &
-)
+    wait
+) &
 
 # Erlang
 (
     group erlang
     package https://github.com/vim-erlang/vim-erlang-runtime.git &
-)
+    wait
+) &
 
 # Perl
 (
     group perl
     package https://github.com/vim-perl/vim-perl.git &
-)
+    wait
+) &
 
 # Files
 (
     group files
     package https://github.com/leshill/vim-json.git &
-)
+    wait
+) &
 
 wait
