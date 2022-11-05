@@ -69,3 +69,6 @@ map <Leader>rz :VimuxZoomRunner<CR>
 
 " jedi-vim
 let g:jedi#popup_on_dot = 0
+
+" fzf
+nnoremap <C-F> :Files<CR>
