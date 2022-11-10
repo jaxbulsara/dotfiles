@@ -29,7 +29,7 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme="violet"
+let g:airline_theme="term"
 
 " Supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
