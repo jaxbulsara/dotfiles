@@ -48,6 +48,7 @@ let g:ale_fixers = {
 \   'javascript': ['prettier', 'eslint'],
 \   'typescript': ['prettier', 'eslint'],
 \   'css': ['prettier', 'eslint'],
+\   'html': ['prettier', 'eslint'],
 \   'python': ['isort', 'black'],
 \   'rust': ['rustfmt'],
 \   'elixir': ['mix_format'],
