@@ -49,7 +49,7 @@ let g:ale_fixers = {
 \   'typescript': ['prettier', 'eslint'],
 \   'css': ['prettier', 'eslint'],
 \   'html': ['prettier', 'eslint'],
-\   'python': ['isort', 'black'],
+\   'python': ['autoflake', 'isort', 'black'],
 \   'rust': ['rustfmt'],
 \   'elixir': ['mix_format'],
 \   'perl': ['perltidy'],
