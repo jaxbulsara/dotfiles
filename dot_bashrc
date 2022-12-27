@@ -235,3 +235,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # upgrade all apt packages and autoremove
 alias apt-upgrade="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
+
+# restart nordvpn
+alias nordvpn-restart="sudo systemctl restart nordvpn nordvpnd && nordvpn c"
