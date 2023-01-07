@@ -73,3 +73,6 @@ let g:jedi#popup_on_dot = 0
 
 " fzf
 nnoremap <C-F> :Files<CR>
+
+" Rust
+let g:rust_keep_autopairs_default=1
