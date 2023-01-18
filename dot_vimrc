@@ -76,3 +76,13 @@ nnoremap <C-F> :Files<CR>
 
 " Rust
 let g:rust_keep_autopairs_default=1
+
+" Move to 25% from top
+function MoveSemiTop()
+    execute "normal zz"
+    let winid = win_getid()
+    let steps = (getwininfo(winid)[0]['variables']['last_pos'][1]-getwininfo(winid)[0]['topline'])/2
+    execute "normal ".steps."\<C-E>"
+endfunction
+
+nnoremap zZ :call MoveSemiTop()<CR>
