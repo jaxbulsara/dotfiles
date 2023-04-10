@@ -198,13 +198,25 @@ export PATH="/home/jay/.poetry/bin:$PATH"
 export PATH="/home/jay/.chezmoi/bin:$PATH"
 
 # Add JDK to path
-export PATH="/home/jay/.local/bin/jdk/bin:$PATH"
+export PATH="/home/jay/.local/bin/jdk-17.0.6/bin:$PATH"
 
 # Add fop to path
 export PATH="/home/jay/.local/bin/fop-2.7/fop:$PATH"
 
 # Add Go to path
-export PATH=/home/jay/.local/bin/go/bin:$PATH
+export PATH="/home/jay/.local/bin/go/bin:$PATH"
+
+# Add platform tools to path
+export PATH="/home/jay/Android/Sdk/platform-tools:$PATH"
+
+# Add gradle to path
+export PATH="/opt/gradle/gradle-8.0.2/bin:$PATH"
+
+# Add kotlin to path
+export PATH="/opt/kotlin/kotlinc/bin:$PATH"
+
+# Set Android SDK path
+export ANDROID_HOME="/home/jay/Android/Sdk"
 
 # Stingray Development
 export STINGRAY_DIR=/home/jay/code/work/stingray_data
@@ -222,8 +234,8 @@ export NVM_DIR="$HOME/.nvm"
 # Run tmux with desired TERM variable
 alias tmux="TERM=screen-256color-bce tmux"
 
-# Set vim as default visual editor
-export VISUAL=vim
+# Set nvim as default visual editor
+export VISUAL=nvim
 
 # Rust
 . "$HOME/.cargo/env"

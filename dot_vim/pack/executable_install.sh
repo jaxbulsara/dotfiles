@@ -116,4 +116,16 @@ source ~/.vim/pack/functions.sh
     wait
 ) &
 
+# Android
+(
+    group android
+    package https://github.com/hsanson/vim-android.git &
+) &
+
+# Kotlin
+(
+    group kotlin
+    package https://github.com/udalov/kotlin-vim.git &
+) &
+
 wait
