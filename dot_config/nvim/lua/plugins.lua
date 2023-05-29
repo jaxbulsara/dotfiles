@@ -70,7 +70,7 @@ return require('packer').startup(function(use)
 
         -- Angle brackets for Rust
         npairs.add_rules ({
-            Rule( "<", ">", "rust" )
+            Rule( "<", ">", { "rust", "kotlin" } )
             :with_pair(cond.not_before_regex(" "))
             :with_move(cond.after_regex(">"))
         })
@@ -125,7 +125,7 @@ return require('packer').startup(function(use)
     use { 'MaxMEllon/vim-jsx-pretty' }
 
     -- Kotlin
-    use { 'udalov/kotlin-vim' }
+    use { 'jaxbulsara/kotlin-vim' }
 
     -- Markdown
     use { 'ixru/nvim-markdown' }

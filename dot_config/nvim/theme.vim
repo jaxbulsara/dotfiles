@@ -4,6 +4,9 @@
 " Disable native mode display
 set noshowmode
 
+" lightline.active.right - gradle indicators
+" \ ['gradle_running'], ['gradle_errors'], ['gradle_warnings'],
+
 " lightline settings
 let g:lightline = {
             \ 'colorscheme': 'molokai',
@@ -13,8 +16,8 @@ let g:lightline = {
                         \ ['readonly', 'filename', 'modified'],
                         \ ],
             \    'right': [
-                        \ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ],
-                        \ ['gradle_running'], ['gradle_errors'], ['gradle_warnings'],
+                        \ ['linter_errors', 'linter_warnings', 'linter_infos'],
+                        \ ['linter_checking', 'linter_ok'],
                         \ ['lineinfo'],
                         \ ['percent'],
                         \ ['fileformat', 'fileencoding', 'filetype'],
@@ -52,3 +55,6 @@ hi Normal guibg=NONE ctermbg=NONE
 
 " Python syntax highlighting
 let g:python_highlight_all=1
+
+" Cursor
+set guicursor=n-v-c-i:block-blinkwait750-blinkoff750-blinkon750

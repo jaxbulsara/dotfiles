@@ -28,8 +28,8 @@ let g:ale_linters = {
             \ }
 
 " Android
-let g:gradle_loclist_show = 1
-let g:gradle_show_signs = 1
+let g:gradle_loclist_show = 0
+let g:gradle_show_signs = 0
 
 " Java
 let g:ale_java_eclipselsp_path = '/home/jay/.local/bin/eclipse.jdt.ls-1.21.0'
