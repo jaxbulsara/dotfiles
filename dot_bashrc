@@ -215,6 +215,9 @@ export PATH="/opt/gradle/gradle-8.0.2/bin:$PATH"
 # Add kotlin to path
 export PATH="/opt/kotlin/kotlinc/bin:$PATH"
 
+# Add renpy to path
+export PATH="/home/jay/.local/bin/renpy:$PATH"
+
 # Set Android SDK path
 export ANDROID_HOME="/home/jay/Android/Sdk"
 
