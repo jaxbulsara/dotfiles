@@ -221,6 +221,9 @@ export PATH="/home/jay/.local/bin/renpy:$PATH"
 # Set Android SDK path
 export ANDROID_HOME="/home/jay/Android/Sdk"
 
+# Add ~/bin to path for ffmpeg
+export PATH="/home/jay/bin:$PATH"
+
 # Stingray Development
 export STINGRAY_DIR=/home/jay/code/work/stingray_data
 export STINGRAY_DATA=${STINGRAY_DIR}/Data
