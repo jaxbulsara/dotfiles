@@ -197,3 +197,37 @@ Download erlang precompiled from: https://www.erlang-solutions.com/downloads
 Download elixir source from: https://github.com/elixir-lang/elixir/releases
 
 Extract elixir source and build with `make` and install with `make install`
+
+## How to reset root/user passwords from live usb
+
+Boot into live USB
+
+Switch to root user. List partitions.
+
+```
+sudo -s
+lsblk -paf
+```
+
+Find the partition containing your local linux installation, say /dev/sda2.
+
+Mount the partition to `/mnt`.
+
+```
+mount /dev/sda2 /mnt
+cd /mnt
+mount --bind /dev /mnt/dev
+mount --bind /dev/pts /mnt/dev/pts
+mount --bind /proc /mnt/proc
+mount --bind /sys /mnt/sys
+chroot /mnt
+```
+
+Now you are logged in as root in your local installation.
+
+```
+passwd root
+passwd jay
+```
+
+etc. Whatever you need to do.
