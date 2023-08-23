@@ -8,16 +8,32 @@ return require('packer').startup(function(use)
     -- General Packages --
     ----------------------
 
-    -- Monokai color scheme
-    -- Use with `colorscheme monokai`
-    -- Set transparent background with `hi Normal guibg=NONE ctermbg=NONE`
-    use { 'tanvirtin/monokai.nvim' }
+    -- color schemes
+    use { 'tanvirtin/monokai.nvim', config = function()
+        local monokai = require('monokai')
+        local palette = monokai.classic
+
+        monokai.setup {
+            palette = {},
+            custom_hlgroups = {
+                Constant = { fg = palette.purple },
+                Special = { fg = palette.aqua },
+                Identifier = { fg = palette.orange },
+            }
+        }
+
+        -- Force transparent background
+        vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+    end }
 
     -- Status bar
     use { 'itchyny/lightline.vim' }
 
     -- Vimux
     use { 'preservim/vimux' }
+
+    -- Supertab
+    use { 'ervandew/supertab' }
 
     -- tmux navigation
     use { 'alexghergh/nvim-tmux-navigation', config = function()
@@ -32,9 +48,6 @@ return require('packer').startup(function(use)
         -- vim.keymap.set('n', "<C-\\>", nvim_tmux_nav.NvimTmuxNavigateLastActive)
         -- vim.keymap.set('n', "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)
     end }
-
-    -- Supertab
-    use { 'ervandew/supertab' }
 
     -- Automatic bracket pairs
     use { "windwp/nvim-autopairs", config = function()
@@ -68,12 +81,14 @@ return require('packer').startup(function(use)
           }
         end
 
-        -- Angle brackets for Rust
-        npairs.add_rules ({
-            Rule( "<", ">", { "rust", "kotlin" } )
-            :with_pair(cond.not_before_regex(" "))
-            :with_move(cond.after_regex(">"))
-        })
+        -- Angle brackets
+        npairs.add_rules (
+            {
+                Rule( "<", ">", { "rust", "kotlin" } )
+                :with_pair(cond.not_before_text(" "))
+                :with_move(cond.after_text(">"))
+            }
+        )
     end }
 
     -- Surrounding pairs

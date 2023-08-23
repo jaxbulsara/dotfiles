@@ -19,7 +19,8 @@ set colorcolumn=80
 set mouse=
 
 " Supertab settings
-let g:SuperTabDefaultCompletionType = "<c-n>"
+set omnifunc=ale#completion#OmniFunc
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 " Python3 support
 let g:python3_host_prog = "/home/jay/.pyenv/shims/python3"

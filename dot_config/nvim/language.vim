@@ -35,7 +35,7 @@ let g:gradle_show_signs = 0
 let g:ale_java_eclipselsp_path = '/home/jay/.local/bin/eclipse.jdt.ls-1.21.0'
 
 " Kotlin
-let g:ale_kotlin_ktlint_options = '--android --log-level=none'
+let g:ale_kotlin_ktlint_options = '--code-style=android_studio --log-level=none'
 let g:ale_kotlin_languageserver_executable = '/home/jay/.local/share/kotlinlsp/server/build/install/server/bin/kotlin-language-server'
 
 " Markdown
