@@ -2,3 +2,4 @@
 !.vim/pack/*.*
 instructions.md
 files/
+.config/nvim/plugin/packer_compiled.lua
