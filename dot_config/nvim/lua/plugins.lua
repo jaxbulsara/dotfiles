@@ -156,6 +156,10 @@ return require('packer').startup(function(use)
     use { 'Konfekt/FastFold' }
     use { 'tmhedberg/SimpylFold' }
 
+    -- Renpy
+
+    use { 'chaimleib/vim-renpy' }
+
     -- Rust
     use { 'bagohart/vim-textobj-function-rust' }
     use { 'rust-lang/rust.vim' }
