@@ -108,6 +108,9 @@ return require('packer').startup(function(use)
     use { 'glts/vim-textobj-comment' }
     use { 'kana/vim-textobj-function' }
 
+    -- Minimiap
+    use { 'wfxr/minimap.vim' }
+
     -----------------------
     -- Language Packages --
     -----------------------

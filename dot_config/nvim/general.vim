@@ -24,3 +24,7 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 " Python3 support
 let g:python3_host_prog = "/home/jay/.pyenv/shims/python3"
+
+" Minimap
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
