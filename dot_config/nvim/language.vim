@@ -10,21 +10,25 @@ let g:ale_fixers = {
                 \ 'trim_whitespace',
                 \ ],
             \ 'javascript': ['prettier', 'eslint'],
+            \ 'javascriptreact': ['prettier', 'eslint'],
             \ 'typescript': ['prettier', 'eslint'],
+            \ 'typescriptreact': ['prettier', 'eslint'],
             \ 'css':    ['prettier', 'eslint'],
             \ 'html':   ['prettier', 'eslint'],
             \ 'python': ['autoflake', 'isort', 'black'],
             \ 'rust':   ['rustfmt'],
             \ 'elixir': ['mix_format'],
             \ 'perl':   ['perltidy'],
-            \ 'kotlin': ['ktlint']
+            \ 'kotlin': ['ktlint'],
+            \ 'sh': ['shfmt']
             \ }
 let g:ale_linters = {
             \ 'rust': ['analyzer'],
             \ 'xml':    ['android'],
             \ 'groovy': ['android'],
             \ 'java':   ['android', 'checkstyle', 'eclipselsp'],
-            \ 'kotlin': ['android', 'ktlint', 'languageserver']
+            \ 'kotlin': ['android', 'ktlint', 'languageserver'],
+            \ 'sh': ['shellcheck']
             \ }
 
 " Android
@@ -43,3 +47,6 @@ let g:vim_markdown_folding_disabled = 1
 
 " Python
 let g:jedi#popup_on_dot = 0
+
+" Shell
+let g:ale_sh_shfmt_options='-i 2'
