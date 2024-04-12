@@ -1,13 +1,13 @@
 # Setup fzf
 # ---------
-if [[ ! "$PATH" == */home/jay/.vim/pack/user-interface/start/fzf/bin* ]]; then
-  PATH="${PATH:+${PATH}:}/home/jay/.vim/pack/user-interface/start/fzf/bin"
+if [[ ! "$PATH" == */home/jay/.local/share/nvim/site/pack/packer/start/fzf/bin* ]]; then
+  PATH="${PATH:+${PATH}:}/home/jay/.local/share/nvim/site/pack/packer/start/fzf/bin"
 fi
 
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/home/jay/.vim/pack/user-interface/start/fzf/shell/completion.bash" 2> /dev/null
+[[ $- == *i* ]] && source "/home/jay/.local/share/nvim/site/pack/packer/start/fzf/shell/completion.bash" 2> /dev/null
 
 # Key bindings
 # ------------
-source "/home/jay/.vim/pack/user-interface/start/fzf/shell/key-bindings.bash"
+source "/home/jay/.local/share/nvim/site/pack/packer/start/fzf/shell/key-bindings.bash"
