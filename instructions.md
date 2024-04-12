@@ -231,3 +231,31 @@ passwd jay
 ```
 
 etc. Whatever you need to do.
+
+# Changing user id
+
+Say you want to change a user id from 1000 to 1028.
+
+```
+sudo adduser admin
+```
+
+log out and log back in as admin
+
+```
+pkill -9 -u jay
+usermod -u 1028 jay
+```
+
+log out and log back in as jay. unmount any external drives
+
+```
+sudo find / -mount -user 1000 -exec sudo chown -h jay {} \;
+```
+
+delete admin user.
+
+```
+sudo userdel admin
+sudo rm -rf /home/admin
+```
