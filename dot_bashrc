@@ -4,8 +4,8 @@
 
 # If not running interactively, don't do anything
 case $- in
-    *i*) ;;
-      *) return;;
+*i*) ;;
+*) return ;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -32,12 +32,12 @@ shopt -s checkwinsize
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
+  debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+xterm-color | *-256color) color_prompt=yes ;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -46,42 +46,42 @@ esac
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
+  if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
+  else
+    color_prompt=
+  fi
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
+xterm* | rxvt*)
+  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+  ;;
+*) ;;
+
 esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  alias ls='ls --color=auto'
+  #alias dir='dir --color=auto'
+  #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
 fi
 
 # colored GCC warnings and errors
@@ -102,7 +102,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+  . ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -127,45 +127,45 @@ MAGENTA="\[\033[00;95m\]"
 DEFAULT="\[\033[00;39m\]"
 
 # Configures the prompt based on the current environment
-function create_prompt {
-    # Python virtual environment
-    local __venv_name=`printf "$DARK_GREY($(echo $VIRTUAL_ENV | awk -F "/" '{print $NF}')) "`
-    local __venv=""
+function create_prompt() {
+  # Python virtual environment
+  local __venv_name=$(printf "$DARK_GREY($(echo $VIRTUAL_ENV | awk -F "/" '{print $NF}')) ")
+  local __venv=""
 
-    # User and host names
-    local __user_and_host="$RED\u@\h"
-    local __colon="$DEFAULT: "
+  # User and host names
+  local __user_and_host="$RED\u@\h"
+  local __colon="$DEFAULT: "
 
-    # Working directory
-    local __directory="$BLUE\W"
+  # Working directory
+  local __directory="$BLUE\W"
 
-    # Git branch info
-    local __git_branch_color="$GREEN"
-    local __git_branch="`__git_ps1`"
+  # Git branch info
+  local __git_branch_color="$GREEN"
+  local __git_branch="$(__git_ps1)"
 
-    # Prompt and input
-    local __prompt="$RED\$"
-    local __input_color="$DEFAULT";
+  # Prompt and input
+  local __prompt="$RED\$"
+  local __input_color="$DEFAULT"
 
-    # Display activated virtual environment
-    if [[ -n "$VIRTUAL_ENV" ]]; then
-        __venv=$__venv_name
-    else
-        __venv=""
-    fi
+  # Display activated virtual environment
+  if [[ -n "$VIRTUAL_ENV" ]]; then
+    __venv=$__venv_name
+  else
+    __venv=""
+  fi
 
-    # Change git branch color based on repository state
-    if [[ $__git_branch =~ "*" ]]; then     # The repository is dirty
-        __git_branch_color="$RED"
-    elif [[ $__git_branch =~ "$" ]]; then   # There are stashed files
-        __git_branch_color="$YELLOW"
-    elif [[ $__git_branch =~ "%" ]]; then   # There are untracked files
-        __git_branch_color="$MAGENTA"
-    elif [[ $__git_branch =~ "+" ]]; then   # There are staged files
-        __git_branch_color="$CYAN"
-    fi
+  # Change git branch color based on repository state
+  if [[ $__git_branch =~ "*" ]]; then # The repository is dirty
+    __git_branch_color="$RED"
+  elif [[ $__git_branch =~ "$" ]]; then # There are stashed files
+    __git_branch_color="$YELLOW"
+  elif [[ $__git_branch =~ "%" ]]; then # There are untracked files
+    __git_branch_color="$MAGENTA"
+  elif [[ $__git_branch =~ "+" ]]; then # There are staged files
+    __git_branch_color="$CYAN"
+  fi
 
-    PS1="$__venv$__user_and_host$__colon$__directory$__git_branch_color$__git_branch $__prompt$__input_color "
+  PS1="$__venv$__user_and_host$__colon$__directory$__git_branch_color$__git_branch $__prompt$__input_color "
 }
 
 # Set PROMPT_COMMAND which is executed each time before PS1
@@ -185,7 +185,7 @@ fi
 # Execute git completion
 if ! shopt -oq posix; then
   if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
+    . ~/.git-completion.bash
   fi
 fi
 eval "$(pyenv init -)"
@@ -201,7 +201,7 @@ export PATH="/home/jay/.chezmoi/bin:$PATH"
 export PATH="/home/jay/.local/bin/jdk-17.0.6/bin:$PATH"
 
 # Add fop to path
-export PATH="/home/jay/.local/bin/fop-2.7/fop:$PATH"
+export PATH="/home/jay/.local/bin/fop:$PATH"
 
 # Add Go to path
 export PATH="/home/jay/.local/bin/go/bin:$PATH"
@@ -232,10 +232,10 @@ export STINGRAY_SHARE=${STINGRAY_DIR}/Share
 export STINGRAY_NEO4J=${STINGRAY_DIR}/Neo4j
 export STINGRAY_SQL=${STINGRAY_DIR}/MSSQL
 
-
+# Node Version Manager
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # Run tmux with desired TERM variable
 alias tmux="TERM=screen-256color-bce tmux"
