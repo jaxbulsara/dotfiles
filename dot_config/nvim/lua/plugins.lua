@@ -169,4 +169,6 @@ return require('packer').startup(function(use)
     use { 'bagohart/vim-textobj-function-rust' }
     use { 'rust-lang/rust.vim' }
 
+    -- TeX
+    use { 'lervag/vimtex' }
 end )
