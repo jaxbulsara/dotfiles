@@ -108,8 +108,10 @@ return require('packer').startup(function(use)
     use { 'glts/vim-textobj-comment' }
     use { 'kana/vim-textobj-function' }
 
-    -- Minimiap
-    use { 'wfxr/minimap.vim' }
+    -- Scrollbar
+    use { 'petertriho/nvim-scrollbar', config = function()
+        require("scrollbar").setup()
+    end }
 
     -----------------------
     -- Language Packages --
