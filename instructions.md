@@ -232,7 +232,7 @@ passwd jay
 
 etc. Whatever you need to do.
 
-# Changing user id
+## Changing user id
 
 Say you want to change a user id from 1000 to 1028.
 
@@ -259,3 +259,12 @@ delete admin user.
 sudo userdel admin
 sudo rm -rf /home/admin
 ```
+
+## Forwarding a port
+
+where `eth0` is your public interface, `8333` is the port, and `100.85.97.113`
+is the destination
+
+sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 8333 -j DNAT --to-destination 100.85.97.113:8333
+sudo iptables -A FORWARD -p tcp -d 100.85.97.113 --dport 8333 -j ACCEPT
+sudo iptables -A POSTROUTING -t nat -s 100.85.97.113 -o eth0 -j MASQUERADE
