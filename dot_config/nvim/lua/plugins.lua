@@ -145,7 +145,7 @@ return require('packer').startup(function(use)
     use { 'MaxMEllon/vim-jsx-pretty' }
 
     -- Kotlin
-    use { 'jaxbulsara/kotlin-vim' }
+    use { 'udalov/kotlin-vim' }
 
     -- Markdown
     use { 'ixru/nvim-markdown' }
